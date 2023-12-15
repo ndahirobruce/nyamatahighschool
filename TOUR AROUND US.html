@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY</title>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        #content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        /* Style for the slideshow container */
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Style for the slides */
+        .mySlides {
+            display: none;
+        }
+
+        /* Style for navigation dots */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.2s flip;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Style for the transparent background with speech bubble text */
+        .speech-bubble {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .speech-bubble img {
+            width: 80px; /* Adjust the size as needed */
+            height: auto;
+            margin-right: 15px;
+        }
+
+        /* Style for the second speech bubble */
+        .speech-bubble2 {
+            position: fixed;
+            bottom: 10px; /* Adjust the value to control the vertical separation */
+            left: calc(50% + 200px); /* Adjust the value based on your layout */
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .speech-bubble2 img {
+            width: 80px; /* Adjust the size as needed */
+            height: auto;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <video id="video-background" autoplay loop muted>
+        <source src="graduation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="content">
+        <h1>TOUR AROUND OUR SCHOOL</h1>
+
+        <div class="slideshow-container">
+            <!-- Slides -->
+            <div class="mySlides">
+                <img src="IMG_2601.JPG" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="IMG_2620.JPG" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="IMG_2622.JPG" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="IMG_2626.JPG" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="IMG_2678.JPG" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="IMG_2782.JPG" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="IMG_2796.JPG" style="width:100%">
+            </div>
+            <!-- Add more slides as needed -->
+
+            <!-- Navigation dots -->
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <!-- Add more dots as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Transparent background with speech bubble text -->
+    <div class="speech-bubble">
+
+        <style>
+            /* Style for the transparent background with speech bubble text */
+            .speech-bubble {
+                position: fixed;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                border-radius: 10px;
+                color: white;
+                display: flex;
+                align-items: center;
+            }
+    
+            .speech-bubble img {
+                width: 120px; /* Adjust the size as needed */
+                height: auto;
+                margin-right: 15px;
+            }
+        </style>
+        <img src="IMG_2766.png" alt="Speech Bubble" />
+        <div>
+            <p><b>HEAD MASTER</b></p>
+            <p>We mold discipline and build a great and potential future. Provide high education standards. We aspire to produce good performing students and emphasize on technological skills. With the cooperation of the parents and very specialized and well-experienced teachers, we create a bright future for the students leading to high performance in all aspects. With proper catering and welfare situations we put our students in, we achieve more. Ensure a proper living standard for a student and putting a student in a proper living environment. We have a proper follow-up staff to coordinate a student’s daily life in every activity. <b>Dr.Musana Alex</b></p>
+        </div>
+    </div>
+    <p>
+        <!-- Second transparent background with speech bubble text -->
+    
+        <style>
+        /* Style for the second transparent background with speech bubble text */
+        .speech-bubble {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border-radius: 10px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+    
+        .speech-bubble img {
+            width: 150px; /* Adjust the size as needed */
+            height: auto;
+            margin-right: 5px;
+        }
+    </style>
+  
+    <script>
+        var slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds (adjust as needed)
+        }
+      
+    </script>
+ 
+    
+    
+</body>
+
+</html>
